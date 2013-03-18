@@ -12,6 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PRODUCT_COPY_FILES += \
+    device/semc/msm7x27-common/prebuilt/Crystal2_v1.2.0.apk:system/app/Crystal2_v1.2.0.apk
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.themeId=Crystal2 \
+    persist.sys.themePackageName=com.darkdog.theme.crystal2
+
 # Hardware
 PRODUCT_PACKAGES += \
     gps.delta \
@@ -370,7 +377,3 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/lib/soundfx/libsrsfx.so:system/lib/soundfx/libsrsfx.so \
     device/semc/msm7x27-common/prebuilt/lib/soundfx/libsrstb.so:system/lib/soundfx/libsrstb.so
 endif
-
-# OTA Update Center
-PRODUCT_COPY_FILES += \
-    device/semc/msm7x27-common/prebuilt/app/OTAUpdater.apk:system/app/OTAUpdater.apk
